@@ -1,0 +1,14 @@
+{{#each this}}
+<dl class="imginfo">
+    <dt><span>{{#num @index}}{{/num}}</span><img src="{{cover}}"/><b>{{#if finish}}完结{{else}}连载{{/if}}</b></dt>
+    <dd>
+        <h2>{{title}}</h2>
+        <h3>{{authors}}</h3>
+        <p>{{summary}}</p>
+        <div>
+            {{#each tags}}
+            <span>{{this}}</span>{{/each}}
+        </div>
+    </dd>
+</dl>
+{{/each}}

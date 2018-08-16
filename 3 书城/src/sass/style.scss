@@ -1,0 +1,233 @@
+@import './common.scss';
+.wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.index {
+    width: 100%;
+    height: 100%;
+    @include display(flex, column);
+}
+
+.header {
+    width: 100%;
+    height: px2rem(45px);
+    line-height: px2rem(45px);
+    padding: 0 35%;
+    background: rgb(224, 224, 224);
+    position: relative;
+    @include display(flex);
+    a {
+        flex: 1;
+        text-align: center;
+        &.active {
+            color: orange;
+        }
+    }
+    span {
+        position: absolute;
+        right: 0;
+    }
+}
+
+.main {
+    width: 100%;
+    flex: 1;
+    overflow: auto;
+    img {
+        width: 100%;
+    }
+}
+
+.banner {
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.nav {
+    width: 100%;
+    padding: px2rem(10px);
+    @extend .cont;
+    ul {
+        @include display(flex, row, space-around);
+        padding: px2rem(10px);
+        li {
+            @include display(flex, column);
+            i {
+                width: px2rem(40px);
+                height: px2rem(40px);
+                border-radius: 50%;
+                background: rgb(245, 245, 245);
+            }
+            span {
+                width: px2rem(40px);
+                text-align: center;
+            }
+        }
+    }
+}
+
+.zb-cont {
+    padding: px2rem(10px);
+    >div {
+        height: px2rem(45px);
+        border-bottom: px2rem(1px) solid #eee;
+        line-height: px2rem(45px);
+    }
+}
+
+.control {
+    width: 100%;
+    font-size: 0;
+    button {
+        width: 50%;
+        height: px2rem(45px);
+        line-height: px2rem(45px);
+        text-align: center;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: px2rem(16px);
+        border-right: px2rem(1px) solid #eee;
+    }
+}
+
+.title {
+    width: 100%;
+    height: px2rem(45px);
+    line-height: px2rem(45px);
+    text-indent: px2rem(10px);
+    border-left: px2rem(2px) solid orange;
+}
+
+.dl-cont {
+    >div {
+        @include display(flex);
+        flex-wrap: wrap;
+        padding-left: 3%;
+        a {
+            width: 30%;
+            margin-right: 3.3%;
+            dl {
+                padding-top: px2rem(15px);
+                dt {
+                    width: 100%;
+                    height: px2rem(115px);
+                    overflow: hidden;
+                    position: relative;
+                    span {
+                        position: absolute;
+                        right: px2rem(-22px);
+                        top: px2rem(3px);
+                        padding: 0 px2rem(20px);
+                        font-size: px2rem(12px);
+                        background: green;
+                        color: #fff;
+                        transform: rotate(45deg);
+                    }
+                }
+                dd {
+                    padding-top: px2rem(8px);
+                    @extend %linetext;
+                }
+            }
+        }
+    }
+}
+
+.cont {
+    border-bottom: px2rem(10px) solid rgb(245, 245, 245);
+    padding-bottom: px2rem(10px);
+}
+
+.imginfo {
+    width: 100%;
+    border-bottom: px2rem(1px) solid #eee;
+    padding-bottom: px2rem(10px);
+    padding-top: px2rem(10px);
+    @include display(flex);
+    dt {
+        width: px2rem(90px);
+        width: px2rem(115px);
+        position: relative;
+        b {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 9;
+            background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+            width: 100%;
+            height: px2rem(25px);
+            line-height: px2rem(25px);
+            color: #fff;
+            text-indent: px2rem(10px);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        span {
+            position: absolute;
+            left: px2rem(5px);
+            top: 0;
+            background: orange;
+            color: #fff;
+            text-align: center;
+            width: px2rem(20px);
+            height: px2rem(20px);
+            line-height: px2rem(20px);
+        }
+    }
+    dd {
+        flex: 1;
+        overflow: hidden;
+        padding-left: px2rem(10px);
+        h3 {
+            font-size: px2rem(16px);
+        }
+        span {
+            padding: 0 px2rem(2px);
+            color: #53ac7d;
+            border: px2rem(1px) solid #53ac7d;
+            border-radius: px2rem(3px);
+        }
+        p {
+            padding-top: px2rem(2px);
+            @include textoverflow();
+            margin-bottom: px2rem(5px);
+            color: #ccc;
+        }
+        >div {
+            font-size: px2rem(12px);
+        }
+    }
+}
+
+.loadlist {
+    width: 100%;
+    .load-cont {}
+    .loading {
+        width: 100%;
+        height: px2rem(45px);
+        line-height: px2rem(45px);
+        background: #04010e;
+        text-align: center;
+        font-size: px2rem(16px);
+        color: #fff;
+        span {
+            width: px2rem(45px);
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        }
+    }
+}

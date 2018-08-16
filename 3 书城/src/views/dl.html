@@ -1,0 +1,14 @@
+{{#each data}}{{#if this.data}}{{#with this.data}}
+<a href="javascript:;">
+    <dl>
+        <dt><span>限免</span><img src="{{cover}}"></dt>
+        <dd>{{title}}</dd>
+    </dl>
+</a> {{/with}}{{else}}
+<a href="javascript:;">
+    <dl>
+        <dt><img src="{{cover}}"></dt>
+        <dd>{{title}}</dd>
+    </dl>
+</a>
+{{/if}} {{/each}}
